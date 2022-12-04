@@ -1,3 +1,5 @@
+import Data.List
+
 shapeScore "A" = 1
 shapeScore "B" = 2
 shapeScore "C" = 3
@@ -20,10 +22,7 @@ lineScore line =
     let ownMove = mapOwnMove unmappedOwnMove in
     (shapeScore ownMove) + roundScore oppMove ownMove
 
-foldl2 f z []     = z
-foldl2 f z (x:xs) = let z2 = z `f` x in seq z2 $ foldl2 f z2 xs
-
 main = do
     f <- readFile "input.txt"
-    let sum = foldl2 (+) 0 (map lineScore (lines f))
+    let sum = foldl' (+) 0 (map lineScore (lines f))
     print sum
