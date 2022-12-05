@@ -9,3 +9,9 @@ As I did not want to enter into the cabal of cabal dependency management just to
 I wrote the parsing using list primitives, mostly `span`. Not having regexp support in the standard library is
 a bit of a downer. But maybe I just did not find it. Overall, I do not have a good first impression of the
 Haskell library documentation, or its feature set.
+
+## Day 5 - Supply Stacks
+
+I am beginning to see the implications of lazy evaluation. And I am wondering how I will fare once the
+AoC gets tougher on algorithmic complexity later. Because I do not have a good feeling for where Haskell builds
+up thunks, as can be observed in my SML-like function definitions...
