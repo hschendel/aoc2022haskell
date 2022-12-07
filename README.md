@@ -22,3 +22,8 @@ Doing a bit more reading about Haskell yesterday I understood that tail recursio
 and that the benefit of lazy evaluation is that formulating recursion like in the `startMarker` function
 does not carry extra cost. In many cases it works to just write down the mathematical solution. So today's
 problem was easy to solve in Haskell, as it was just about a list prefix containing unique characters.
+
+## Day 7 - No Space Left on Device
+
+This took me long. Because of functional programming perfectionism. Instead of simply writing down the
+correct calculation, I tried to "optimize" it while doing it. The old trap.
