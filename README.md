@@ -27,3 +27,8 @@ problem was easy to solve in Haskell, as it was just about a list prefix contain
 
 This took me long. Because of functional programming perfectionism. Instead of simply writing down the
 correct calculation, I tried to "optimize" it while doing it. The old trap.
+
+## Day 8 - Treetop Tree House
+
+I learned a bit about all the helpful list functions Haskell has. I like how `transpose` and `zipWith` allow
+me to express the calculation in a readable manner.
