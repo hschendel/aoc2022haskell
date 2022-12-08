@@ -15,14 +15,14 @@ orMap m1 m2 = zipWith (zipWith (||)) m1 m2
 
 visibleMap :: [[Int]] -> [[Bool]]
 visibleMap rows =
-    let visibleFromLeft = map visibleFromStart rows in
-    let visibleFromRight = map reverse (map visibleFromStart (map reverse rows)) in
-    let visibleFromLeftAndRight = visibleFromLeft `orMap` visibleFromRight in
-    let cols = transpose rows in
-    let visibleFromTop = map visibleFromStart cols in
-    let visibleFromBottom = map reverse (map visibleFromStart (map reverse cols)) in
-    let visibleFromTopAndBottom = visibleFromTop `orMap` visibleFromBottom in
-    visibleFromLeftAndRight `orMap` (transpose visibleFromTopAndBottom)
+    let visibleFromLeft = map visibleFromStart rows
+        visibleFromRight = map reverse (map visibleFromStart (map reverse rows))
+        visibleFromLeftAndRight = visibleFromLeft `orMap` visibleFromRight
+        cols = transpose rows
+        visibleFromTop = map visibleFromStart cols
+        visibleFromBottom = map reverse (map visibleFromStart (map reverse cols))
+        visibleFromTopAndBottom = visibleFromTop `orMap` visibleFromBottom
+    in  visibleFromLeftAndRight `orMap` (transpose visibleFromTopAndBottom)
 
 countTruesInList [] = 0
 countTruesInList (True:bl) = 1 + (countTruesInList bl)

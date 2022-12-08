@@ -18,14 +18,14 @@ viewingDistanceFor belowHeight (h:hl) =
 multMap m1 m2 = zipWith (zipWith (*)) m1 m2
 
 scoreMap scoringFunc addFunc rows =
-    let fromLeft = map scoringFunc rows in
-    let fromRight = map reverse (map scoringFunc (map reverse rows)) in
-    let fromLeftAndRight = addFunc fromLeft fromRight in
-    let cols = transpose rows in
-    let fromTop = map scoringFunc cols in
-    let fromBottom = map reverse (map scoringFunc (map reverse cols)) in
-    let fromTopAndBottom = addFunc fromTop fromBottom in
-    addFunc fromLeftAndRight (transpose fromTopAndBottom)
+    let fromLeft = map scoringFunc rows
+        fromRight = map reverse (map scoringFunc (map reverse rows))
+        fromLeftAndRight = addFunc fromLeft fromRight
+        cols = transpose rows
+        fromTop = map scoringFunc cols
+        fromBottom = map reverse (map scoringFunc (map reverse cols))
+        fromTopAndBottom = addFunc fromTop fromBottom
+    in  addFunc fromLeftAndRight (transpose fromTopAndBottom)
 
 maxFromMap m = foldl' max 0 (map (foldl' max 0) m)
 
