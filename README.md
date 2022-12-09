@@ -32,3 +32,9 @@ correct calculation, I tried to "optimize" it while doing it. The old trap.
 
 I learned a bit about all the helpful list functions Haskell has. I like how `transpose` and `zipWith` allow
 me to express the calculation in a readable manner.
+
+## Day 9 - Rope Bridge
+
+Even though I still fight the syntax sometimes, learning Haskell is bearing fruits. The decomposition of
+a problem into pure functions allowed me to easily generalize the solution for part two. The important thing
+was not to be misled into simulating the whole map but just considering the positions of all knots.
