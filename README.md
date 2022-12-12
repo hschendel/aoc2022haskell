@@ -38,3 +38,9 @@ me to express the calculation in a readable manner.
 Even though I still fight the syntax sometimes, learning Haskell is bearing fruits. The decomposition of
 a problem into pure functions allowed me to easily generalize the solution for part two. The important thing
 was not to be misled into simulating the whole map but just considering the positions of all knots.
+
+## Day 11 - Monkey in the Middle
+
+It turns out that managing more complex data structures (array of monkeys) was a bit of a challenge for me.
+I am not sure if this is the idiomatic way. Also, the modulo solution to "manage the worry level" was a bit
+of a guess after seeing that all test divisors are prime.
