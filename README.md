@@ -44,3 +44,9 @@ was not to be misled into simulating the whole map but just considering the posi
 It turns out that managing more complex data structures (array of monkeys) was a bit of a challenge for me.
 I am not sure if this is the idiomatic way. Also, the modulo solution to "manage the worry level" was a bit
 of a guess after seeing that all test divisors are prime.
+
+## Day 12 - Hill Climbing Algorithm
+
+My vacation is over and it shows. I also did not get at first that going down more than one height level is OK.
+That in turn led me to doubt my implementation. Finally the A* performance does not look too bad for a pure
+functional implementation.
